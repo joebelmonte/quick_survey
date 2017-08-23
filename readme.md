@@ -7,3 +7,4 @@ passport.js
 Google's OAuth
 Mongoose.js
 prettier
+concurrently
