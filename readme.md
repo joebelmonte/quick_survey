@@ -8,3 +8,6 @@ Google's OAuth
 Mongoose.js
 prettier
 concurrently
+react
+redux
+react-router
