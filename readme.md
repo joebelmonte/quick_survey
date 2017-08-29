@@ -11,3 +11,5 @@ concurrently
 react
 redux
 react-router
+Stripe API
+react-stripe-checkout
