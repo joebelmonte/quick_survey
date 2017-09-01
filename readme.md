@@ -11,5 +11,8 @@ concurrently
 react
 redux
 react-router
+redux-form
 Stripe API
 react-stripe-checkout
+Sendgrid for sending emails
+Mlab
