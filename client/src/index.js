@@ -1,4 +1,5 @@
 import 'materialize-css/dist/css/materialize.min.css'
+import './index.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -20,6 +21,3 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#root')
 )
-
-console.log('Stripe key is ', process.env.REACT_APP_STRIPE_KEY)
-console.log('Environment is ', process.env.NODE_ENV)
