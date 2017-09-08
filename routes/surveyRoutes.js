@@ -22,6 +22,12 @@ module.exports = app => {
     res.send(surveys)
   })
 
+  app.get('/api/surveys/:id', requireLogin, async (req, res) => {
+    const survey = await Survey.find({ _id: req.params.id })
+
+    res.send(survey)
+  })
+
   app.get('/api/surveys/:surveyId/:choice', (req, res) => {
     res.send('Thanks for voting!')
   })

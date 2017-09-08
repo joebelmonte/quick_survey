@@ -17,15 +17,18 @@ react-stripe-checkout
 Sendgrid for sending emails
 Mlab
 LocalTunnel
+react-easy-chart (for the pie chart)
 
 
 To Do's remaining:
 
 Set up github repo
 Write readme
-Write landing page
-Fix landing page for logged in users
-Delete a survey
+Write landing page for logged in/our users
 Get details on a survey
-Update resume and portfolio
 Better thanks screen for survey respondents
+Update resume and portfolio
+Better error handling when user has no credits left
+Pie chart!
+Fix bug with invalid date for not yet responded
+More granularity on the timestamps?

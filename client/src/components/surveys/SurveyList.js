@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { fetchSurveys, deleteSurvey } from '../../actions'
 
 class SurveyList extends Component {
@@ -30,7 +31,12 @@ class SurveyList extends Component {
               No: {survey.no}
             </a>
           </div>
-          <a className="waves-effect waves-light btn">Details</a>
+          <Link
+            className="waves-effect waves-light btn"
+            to={`/surveys/detail/${survey._id}`}
+          >
+            Details
+          </Link>
           <a
             className="waves-effect waves-light btn red darken-3 right "
             onClick={() => this.props.deleteSurvey(survey._id)}
@@ -55,6 +61,7 @@ function mapStateToProps({ surveys }) {
   return { surveys }
 }
 
-export default connect(mapStateToProps, { fetchSurveys, deleteSurvey })(
-  SurveyList
-)
+export default connect(mapStateToProps, {
+  fetchSurveys,
+  deleteSurvey
+})(SurveyList)
