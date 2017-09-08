@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { PieChart } from 'react-easy-chart'
+import PieChart from 'react-simple-pie-chart'
 import { fetchSurvey } from '../../actions'
 
 class SurveyDetail extends Component {
@@ -108,11 +108,65 @@ class SurveyDetail extends Component {
     )
   }
 
+  renderPieChartSection() {
+    console.log('in renderPieChart')
+    const { yes, no } = this.props.survey
+    const totalVotes = yes + no
+    const percentYes = Math.round(yes / totalVotes * 100)
+    const percentNo = Math.round(no / totalVotes * 100)
+    console.log('yes is ', yes)
+    console.log(yes === undefined)
+    console.log('no is ', no)
+    if (yes === undefined) {
+      return
+    }
+    if (totalVotes === 0) {
+      return
+    }
+    return (
+      <div className="section">
+        <div className="row">
+          <div className="col s12">
+            <h5>Results:</h5>
+          </div>
+        </div>
+        <div className="row pie-chart-section valign-wrapper">
+          <div className="col s3">
+            {percentYes}% Voted Yes
+          </div>
+          <div className="col s6">
+            {this.renderPieChart(yes, no)}
+          </div>
+          <div className="col s3">
+            {percentNo}% Voted No
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  renderPieChart(yes, no) {
+    const slices = [
+      {
+        color: '#e74c3c',
+        value: no
+      },
+      {
+        color: '#2ecc71',
+        value: yes
+      }
+    ]
+    return <PieChart slices={slices} />
+  }
+
   render() {
     console.log('this.props.survey is ', this.props.survey)
+
     return (
       <div>
         {this.renderContent()}
+        <div className="divider" />
+        {this.renderPieChartSection()}
       </div>
     )
   }
