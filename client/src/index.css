@@ -6,3 +6,21 @@
 .pie-chart-section {
   text-align: center;
 }
+
+.material-icons {
+  font-size: 900%;
+}
+
+.intro-text {
+  height: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.down-arrow {
+  color: #90caf9;
+}
+
+.icon-instructions {
+  margin-bottom: 75px;
+}

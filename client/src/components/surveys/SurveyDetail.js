@@ -63,16 +63,16 @@ class SurveyDetail extends Component {
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Body of the Email</h5>
+          <h5>Email Subject</h5>
           <p>
-            {body}
+            {subject}
           </p>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Email Subject</h5>
+          <h5>Body of the Email</h5>
           <p>
-            {subject}
+            {body}
           </p>
         </div>
         <div className="divider" />
