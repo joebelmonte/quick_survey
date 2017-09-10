@@ -6,32 +6,30 @@ export default function() {
       <div className="container">
         <div className="row">
           <div className="col l6 s12">
-            <h5 className="white-text">Footer Content</h5>
+            <h5 className="white-text">Quick Survey</h5>
             <p className="grey-text text-lighten-4">
-              You can use rows and columns here to organize your footer content.
+              A demonstration app by Joe Bemonte
             </p>
           </div>
           <div className="col l4 offset-l2 s12">
             <h5 className="white-text">Links</h5>
             <ul>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Link 1
+                <a
+                  className="grey-text text-lighten-3"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/joe-belmonte/"
+                >
+                  LinkedIn
                 </a>
               </li>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Link 2
-                </a>
-              </li>
-              <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Link 3
-                </a>
-              </li>
-              <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Link 4
+                <a
+                  className="grey-text text-lighten-3"
+                  target="_blank"
+                  href="https://github.com/joebelmonte"
+                >
+                  GitHub
                 </a>
               </li>
             </ul>
@@ -40,9 +38,12 @@ export default function() {
       </div>
       <div className="footer-copyright">
         <div className="container">
-          © 2014 Copyright Text
-          <a className="grey-text text-lighten-4 right" href="#!">
-            More Links
+          <a
+            className="grey-text text-lighten-3"
+            target="_blank"
+            href="http://www.josephbelmonte.com"
+          >
+            www.josephbelmonte.com
           </a>
         </div>
       </div>

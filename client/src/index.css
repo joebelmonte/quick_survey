@@ -1,6 +1,18 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  color: #6a5f63;
+}
+
 .site-name {
-  padding: 10px;
+  margin: 0 15px;
   font-size: 175%;
+}
+
+.site-name:hover {
+  border-bottom: 1px solid white;
 }
 
 .pie-chart-section {
@@ -13,14 +25,61 @@
 
 .intro-text {
   height: 250px;
-  padding-top: 15px;
+  padding-top: 35px;
   padding-bottom: 15px;
+  background-image: url(assets/helloquence-61189.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  background-attachment: fixed;
 }
 
-.down-arrow {
-  color: #90caf9;
+.intro-text,
+h1 {
+  font-size: 235%;
+  color: #003330;
+  font-weight: 300;
+}
+
+.intro-text,
+h3 {
+  font-weight: 300;
+}
+
+.nav-wrapper {
+  background-color: #003330;
+  font-weight: 200;
+}
+
+.nav-bar-logged-in {
+  font-size: 125%;
+}
+
+.credits {
+  font-size: 125%;
+}
+
+.nav-bar-logged-in:hover {
+  border-bottom: 1px solid white;
 }
 
 .icon-instructions {
-  margin-bottom: 75px;
+  margin: 75px 15px;
+  color: #003330;
+}
+
+.landing-instructions-detail {
+  background-color: #c4c4c4;
+  padding: 50px 0;
+  margin: 0;
+}
+
+.landing-instructions-text {
+  padding: 25px 0;
+}
+
+.page-footer {
+  background-color: #003330;
+  padding-bottom: 15px;
+  font-weight: 200;
 }

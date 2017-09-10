@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Footer from './Footer'
 
 class Landing extends Component {
   renderLoggedOutContent() {
@@ -7,7 +8,7 @@ class Landing extends Component {
       <div>
         <div className="intro-text">
           <h1>Welcome to Quick Survey</h1>
-          <h3>A demonstration app by Joe Belmonte</h3>
+          <h3>by Joe Belmonte</h3>
         </div>
         <div className="row icon-instructions">
           <div className="col s4">
@@ -48,6 +49,22 @@ class Landing extends Component {
             <h5>Analyze the responses as they come in.</h5>
           </div>
         </div>
+        <div className="row landing-instructions-detail">
+          <div className="col s8 offset-s2">
+            <div className="landing-instructions-text">
+              <h3>
+                Quick Survey is a demo application that allows users to create 1
+                question yes or no surveys.
+              </h3>
+            </div>
+            <div className="landing-instructions-text">
+              <h3>
+                These surveys are then emailed out, and the results are recorded
+                for review.
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
@@ -57,7 +74,16 @@ class Landing extends Component {
       case null:
         return
       case false:
-        return this.renderLoggedOutContent()
+        return (
+          <div>
+            <div style={{ textAlign: 'center ' }}>
+              {this.renderLoggedOutContent()}
+            </div>
+            <div>
+              <Footer />
+            </div>
+          </div>
+        )
       default:
         return <div>Message for a user who is logged in.</div>
     }
@@ -65,8 +91,10 @@ class Landing extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center ' }}>
-        {this.renderContent()}
+      <div>
+        <div>
+          {this.renderContent()}
+        </div>
       </div>
     )
   }

@@ -11,7 +11,9 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login With Google</a>
+            <a href="/auth/google">
+              <span className="nav-bar-logged-in">Login With Google</span>
+            </a>
           </li>
         )
       default:
@@ -20,16 +22,24 @@ class Header extends Component {
             <Payments />
           </li>,
           <li key="3" style={{ margin: '0 10px' }}>
-            Credits: {this.props.auth.credits}
+            <span className="credits">
+              Credits: {this.props.auth.credits}
+            </span>
           </li>,
           <li key="4">
-            <Link to="/surveys">Your Surveys</Link>
+            <Link to="/surveys">
+              <span className="nav-bar-logged-in">Your Surveys</span>
+            </Link>
           </li>,
           <li key="5">
-            <Link to="/surveys/new">Create A Survey</Link>
+            <Link to="/surveys/new">
+              <span className="nav-bar-logged-in">Create A Survey</span>
+            </Link>
           </li>,
           <li key="2">
-            <a href="/api/logout">Logout</a>
+            <a href="/api/logout">
+              <span className="nav-bar-logged-in">Logout</span>
+            </a>
           </li>
         ]
     }
@@ -38,7 +48,7 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper blue darken-3">
+        <div className="nav-wrapper">
           <Link to="/" className="left-brand-logo">
             <span className="site-name">Quick Survey</span>
           </Link>
