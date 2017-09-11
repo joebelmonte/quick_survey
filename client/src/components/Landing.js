@@ -74,33 +74,42 @@ class Landing extends Component {
       <div>
         <div className="logged-in-landing">
           <h1>Quick Survey</h1>
-          <h2>A demonstration app developed by Joe Belmonte</h2>
-          <h3>To use to application, follow these steps:</h3>
+          <p>Instructions:</p>
         </div>
-        <ol>
-          <li>
-            Add credits via Stripe by clicking the button in the navigation bar.
-            <ol className="circle">
+        <div className="row instructions">
+          <div className="col s6 offset-s3">
+            <ol>
               <li>
-                For the purposes of this application, you can use credit card
-                number <i>4242-4242-4242-4242</i>, any expiration date that
-                occurs in the future, and dummy data for the rest of the form.
+                Add credits via Stripe by clicking the button in the navigation
+                bar.
+                <ol className="circle">
+                  <li>
+                    For the purposes of this application, you can use credit
+                    card number <i>4242-4242-4242-4242</i>, any expiration date
+                    that occurs in the future, and dummy data for the rest of
+                    the form.
+                  </li>
+                </ol>
+              </li>
+              <div className="instructions-bullets">
+                <li>
+                  Click the button in the navigation bar to create a survey. You
+                  must enter information in all fields.
+                  <ol className="circle">
+                    <li>
+                      Email addresses should be entered in comma-delimited
+                      format.
+                    </li>
+                  </ol>
+                </li>
+              </div>
+              <li>
+                Review the results of your surveys by clicking{' '}
+                <i>Your Surveys</i>.
               </li>
             </ol>
-          </li>
-          <li>
-            Click the button in the navigation bar to create a survey. You must
-            enter information in all fields.
-            <ul>
-              <li>
-                Email addresses should be entered in comma-delimited format.
-              </li>
-            </ul>
-          </li>
-          <li>
-            Review the results of your surveys by clicking <i>Your Surveys</i>.
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     )
   }
@@ -124,6 +133,9 @@ class Landing extends Component {
         return (
           <div>
             {this.renderLoggedInContent()}
+            <div>
+              <Footer />
+            </div>
           </div>
         )
     }

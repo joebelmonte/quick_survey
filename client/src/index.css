@@ -49,6 +49,18 @@ h1 {
   text-align: center;
 }
 
+.logged-in-landing {
+}
+
+.instructions {
+  font-size: 200%;
+  height: 600px;
+}
+
+.instructions-bullets {
+  margin: 40px 0;
+}
+
 .circle {
   list-style: circle;
 }
