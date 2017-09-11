@@ -69,6 +69,42 @@ class Landing extends Component {
     )
   }
 
+  renderLoggedInContent() {
+    return (
+      <div>
+        <div className="logged-in-landing">
+          <h1>Quick Survey</h1>
+          <h2>A demonstration app developed by Joe Belmonte</h2>
+          <h3>To use to application, follow these steps:</h3>
+        </div>
+        <ol>
+          <li>
+            Add credits via Stripe by clicking the button in the navigation bar.
+            <ol className="circle">
+              <li>
+                For the purposes of this application, you can use credit card
+                number <i>4242-4242-4242-4242</i>, any expiration date that
+                occurs in the future, and dummy data for the rest of the form.
+              </li>
+            </ol>
+          </li>
+          <li>
+            Click the button in the navigation bar to create a survey. You must
+            enter information in all fields.
+            <ul>
+              <li>
+                Email addresses should be entered in comma-delimited format.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Review the results of your surveys by clicking <i>Your Surveys</i>.
+          </li>
+        </ol>
+      </div>
+    )
+  }
+
   renderContent() {
     switch (this.props.auth) {
       case null:
@@ -85,7 +121,11 @@ class Landing extends Component {
           </div>
         )
       default:
-        return <div>Message for a user who is logged in.</div>
+        return (
+          <div>
+            {this.renderLoggedInContent()}
+          </div>
+        )
     }
   }
 

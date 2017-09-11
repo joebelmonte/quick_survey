@@ -41,6 +41,18 @@ h1 {
   font-weight: 300;
 }
 
+.logged-in-landing,
+h1 {
+  font-size: 235%;
+  color: #003330;
+  font-weight: 300;
+  text-align: center;
+}
+
+.circle {
+  list-style: circle;
+}
+
 .intro-text,
 h3 {
   font-weight: 300;
