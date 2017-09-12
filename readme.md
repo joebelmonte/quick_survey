@@ -1,31 +1,51 @@
-Technologies Used:
+# Quick Survey
+## A Demonstration App by Joe Belmonte
 
-express
-node
-nodemon
-passport.js
-Google's OAuth
-Mongoose.js
-prettier
-concurrently
-react
-redux
-react-router
-redux-form
-Stripe API
-react-stripe-checkout
+[Link to the deployed app](https://quicksurvey-joe-belmonte.herokuapp.com/)
+
+### Overview
+
+Quick Survey is a practice application that I wrote in conjunction with a Udemy course I took called "Node with React: Fullstack Web Development."
+
+The purpose of the application is to allow a user to send a 1 question yes or no survey to an arbitray number of respondents.  Each survey costs 1 credit, and credits can be purchased via Stripe at $5 increments ($5 for 5 credits).  Since the app is for demonstration purposes only, the Stripe API is in test mode only and will accept a credit card number of 4242-4242-4242-4242.
+
+The respondents will receive an email sent via [SendGrid](https://sendgrid.com) containing the question and separate links to click for responses of "yes" or "no".  Responses are records by SendGrid and funneled back to the application where they are recorded in a MongoDB database hosted on [Mlab](https://mlab.com).
+
+Within the application, the user can review each survey that has been sent as well as the most current results as they come in.
+
+### Technologies Used:
+
+#### Front End
+
+*React
+*Redux
+*React-router
+*Redux-form
+#React-easy-chart (for the pie chart)
+
+#### Back End
+
+*Node
+*Express
+*Mongoose
+*MongoDB
+
+#### Authentication and Payments
+
+Google OAuth
+Passport
+Stripe
+React-stripe-checkout
+
+#### Misc.
+
 Sendgrid for sending emails
 Mlab
+prettier
+concurrently
 LocalTunnel
-react-easy-chart (for the pie chart)
 
 
-To Do's remaining:
+### Screen Shot of the app
 
-Set up github repo
-Write readme
-Write landing page for logged in/our users
-Better thanks screen for survey respondents
-Better error handling when user has no credits left
-More granularity on the timestamps?
-Update resume and portfolio
+![Screen Shot](/quick_survey_screen_shot "Quick Survey Screen Shot")
