@@ -14,10 +14,10 @@ class SurveyList extends Component {
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
             <span className="card-title">
-              {survey.title}
+              Survey Title: {survey.title}
             </span>
             <p>
-              {survey.body}
+              Email Body: {survey.body}
             </p>
             <p className="right">
               Sent On: {new Date(survey.dateSent).toLocaleDateString()}
@@ -51,6 +51,7 @@ class SurveyList extends Component {
   render() {
     return (
       <div>
+        <h1>Your Surveys:</h1>
         {this.renderSurveys()}
       </div>
     )

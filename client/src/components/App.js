@@ -25,7 +25,7 @@ class App extends Component {
             <div className="container">
               <Route exact path="/surveys" component={Dashboard} />
               <Route path="/surveys/detail/:id" component={SurveyDetail} />
-              <Route path="/surveys/new" component={SurveyNew} />
+              <Route path="/surveys/new" component={SurveyNew} params="foo" />
             </div>
           </div>
         </BrowserRouter>

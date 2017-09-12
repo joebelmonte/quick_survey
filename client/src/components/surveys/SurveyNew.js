@@ -1,6 +1,7 @@
 //SurveyNew shows SurveyForm and SurveyFormReview
 import React, { Component } from 'react'
 import { reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
 import SurveyForm from './SurveyForm'
 import SurveyFormReview from './SurveyFormReview'
 
@@ -19,6 +20,7 @@ class SurveyNew extends Component {
     return (
       <SurveyForm
         onSurveySubmit={() => this.setState({ showFormReview: true })}
+        credits={this.props.credits}
       />
     )
   }
@@ -32,6 +34,13 @@ class SurveyNew extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  if (!state.auth) {
+    return { credits: 0 }
+  }
+  return { credits: state.auth.credits }
+}
+
 export default reduxForm({
   form: 'surveyForm'
-})(SurveyNew)
+})(connect(mapStateToProps)(SurveyNew))

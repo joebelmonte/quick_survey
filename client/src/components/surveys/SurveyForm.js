@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import SurveyField from './SurveyField'
 import validateEmails from '../../utils/validateEmails'
 import formFields from './formFields'
+import Payments from '../Payments'
 
 class SurveyForm extends Component {
   renderFields() {
@@ -22,7 +23,24 @@ class SurveyForm extends Component {
     })
   }
 
+  renderButton() {
+    if (this.props.credits === 0) {
+      return (
+        <div className="right">
+          <Payments />
+        </div>
+      )
+    }
+    return (
+      <button type="submit" className="teal btn-flat right white-text">
+        Next
+        <i className="material-icons right">done</i>
+      </button>
+    )
+  }
+
   render() {
+    console.log('in SurveyForm and this.props.credits is ', this.props.credits)
     return (
       <div>
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
@@ -30,10 +48,7 @@ class SurveyForm extends Component {
           <Link to="/surveys" className="red btn-flat white-text">
             Cancel
           </Link>
-          <button type="submit" className="teal btn-flat right white-text">
-            Next
-            <i className="material-icons right">done</i>
-          </button>
+          {this.renderButton()}
         </form>
       </div>
     )
