@@ -10,7 +10,6 @@ class SurveyDetail extends Component {
   }
 
   renderRecipients(recipients) {
-    console.log('recipients is ', recipients)
     if (!recipients) {
       return
     }
@@ -109,14 +108,10 @@ class SurveyDetail extends Component {
   }
 
   renderPieChartSection() {
-    console.log('in renderPieChart')
     const { yes, no } = this.props.survey
     const totalVotes = yes + no
     const percentYes = Math.round(yes / totalVotes * 100)
     const percentNo = Math.round(no / totalVotes * 100)
-    console.log('yes is ', yes)
-    console.log(yes === undefined)
-    console.log('no is ', no)
     if (yes === undefined) {
       return
     }
@@ -162,8 +157,6 @@ class SurveyDetail extends Component {
   }
 
   render() {
-    console.log('this.props.survey is ', this.props.survey)
-
     return (
       <div>
         {this.renderContent()}

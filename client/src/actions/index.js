@@ -17,8 +17,6 @@ export const submitSurvey = (values, history) => async dispatch => {
   try {
     const res = await axios.post('/api/surveys', values)
 
-    console.log('res is ', res)
-
     history.push('/surveys')
     dispatch({ type: FETCH_USER, payload: res.data })
   } catch (err) {
