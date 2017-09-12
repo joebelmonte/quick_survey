@@ -27,7 +27,7 @@ export default function() {
                 <a
                   className="grey-text text-lighten-3"
                   target="_blank"
-                  href="https://github.com/joebelmonte"
+                  href="https://github.com/joebelmonte/quick_survey"
                 >
                   GitHub
                 </a>
