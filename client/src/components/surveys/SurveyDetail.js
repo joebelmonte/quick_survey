@@ -56,42 +56,42 @@ class SurveyDetail extends Component {
     return (
       <div>
         <div className="section">
-          <h5>Survey Title</h5>
-          <p>
+          <p>Survey Title</p>
+          <h5>
             {title}
-          </p>
+          </h5>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Email Subject</h5>
-          <p>
+          <p>Email Subject</p>
+          <h5>
             {subject}
-          </p>
+          </h5>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Body of the Email</h5>
-          <p>
+          <p>Body of the Email</p>
+          <h5>
             {body}
-          </p>
+          </h5>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Date Sent</h5>
-          <p>
+          <p>Date Sent</p>
+          <h5>
             {this.renderDate(dateSent)}
-          </p>
+          </h5>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Date of Most Recent Response</h5>
-          <p>
+          <p>Date of Most Recent Response</p>
+          <h5>
             {this.renderDate(lastResponded)}
-          </p>
+          </h5>
         </div>
         <div className="divider" />
         <div className="section">
-          <h5>Recipient List</h5>
+          <h1>Recipient List</h1>
           <table>
             <thead>
               <tr>

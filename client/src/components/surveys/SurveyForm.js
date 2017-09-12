@@ -40,7 +40,6 @@ class SurveyForm extends Component {
   }
 
   render() {
-    console.log('in SurveyForm and this.props.credits is ', this.props.credits)
     return (
       <div>
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
