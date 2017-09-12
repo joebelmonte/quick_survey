@@ -19,9 +19,9 @@ Within the application, the user can review all surveys and the results as they 
 
 * React
 * Redux
-* React-router
-* Redux-form
-* React-easy-chart
+* React Router
+* Redux Form
+* React Easy Chart
 
 #### Back End
 
@@ -35,7 +35,7 @@ Within the application, the user can review all surveys and the results as they 
 * Google OAuth
 * Passport
 * Stripe
-* React-stripe-checkout
+* React Stripe Checkout
 
 #### Misc.
 
