@@ -127,15 +127,15 @@ class SurveyDetail extends Component {
         </div>
         <div className="row pie-chart-section valign-wrapper">
           <div className="col s3">
-            {percentYes}% Voted Yes
-            <div>{yes} total votes</div>
+            {percentNo}% Voted No
+            <div>{no} total votes</div>
           </div>
           <div className="col s6">
             {this.renderPieChart(yes, no)}
           </div>
           <div className="col s3">
-            {percentNo}% Voted No
-            <div>{no} total votes</div>
+            {percentYes}% Voted Yes
+            <div>{yes} total votes</div>
           </div>
         </div>
       </div>
