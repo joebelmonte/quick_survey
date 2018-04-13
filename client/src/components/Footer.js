@@ -8,7 +8,7 @@ export default function() {
           <div className="col l6 s12">
             <h5 className="white-text">Quick Survey</h5>
             <p className="grey-text text-lighten-4">
-              A demonstration app by Joe Bemonte
+              A demonstration app by Joe Belmonte
             </p>
           </div>
           <div className="col l4 offset-l2 s12">
